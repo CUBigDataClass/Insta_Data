@@ -1,10 +1,8 @@
 from instagram import client, subscriptions
 from pymongo import MongoClient
-import json
 
 connection = MongoClient('localhost', 27017)
 db = connection.insta_data1
-
 
 session_opts = {
     'session.type': 'file',
@@ -26,29 +24,14 @@ api = client.InstagramAPI(access_token='4689265.35307b6.392bd0f97a694647baeded2c
 #media_popular = api.media_search(lat="37.7808851",lng="-122.3948632",distance=1000)
 media_popular = api.media_popular()
 
-# db[]
+db[]
 
 for media in media_popular:
 	try:
-		# for m in media.tags:
-		# 	m.name
-		# print({"latitude":media.location.point.latitude,"longitude":media.location.point.longitude})
-		tags = [tag.name for tag in media.tags]
-		likes = media.like_count
-		url = media.get_standard_resolution_url()
-		location = {"latitude":media.location.point.latitude,"longitude":media.location.point.longitude}
-			# print([method for method in dir(m) if callable(getattr(m, method))])
-			# print(v)
-		field = {"url":url, "likes":likes, "tag":tags, "location":location}
-		# asdf = {tag: count}
-		print(field)
-		db.posts.save(field)
-		# db.tags.
-		# print(media.get_standard_resolution_url())		#get image url
-		# print (media.like_count)		#get number of likes
-		# print (media.tags)		#get all tags in an array
-		# print (media.location)
+		print media.get_standard_resolution_url()		#get image url
+		print media.like_count		#get number of likes
+		print media.tags		#get all tags in an array
+		print media.location
 
 	except Exception as e:
-		pass
-		# print( e)
+		print e
