@@ -1,6 +1,7 @@
 from instagram import client, subscriptions
 from pymongo import MongoClient
 import json
+import time
 
 connection = MongoClient('localhost', 27017)
 db = connection.insta_data
@@ -24,10 +25,10 @@ CONFIG = {
 
 api = client.InstagramAPI(access_token='4689265.35307b6.392bd0f97a694647baeded2c94e041b6')
 #media_popular = api.media_search(lat="37.7808851",lng="-122.3948632",distance=1000)
-media_popular = api.media_popular()
 i = 0
 # db[]
 while(i < 10000):
+	media_popular = api.media_popular()
 	for media in media_popular:
 		try:
 		# for m in media.tags:
@@ -48,7 +49,7 @@ while(i < 10000):
 
 			# asdf = {tag: count}
 			# print(field)
-			db.posts.save(field)
+			db.posts.update({"id":postid},field, upsert = True)
 			i = i + 1
 			# db.tags.
 			# print(media.get_standard_resolution_url())		#get image url
@@ -57,5 +58,6 @@ while(i < 10000):
 			# print (media.location)
 
 		except Exception as e:
-			pass
+			# pass
 			# print( e)
+	time.sleep(5)
