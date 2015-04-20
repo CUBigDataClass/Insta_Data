@@ -23,3 +23,12 @@
 	2. show dbs
 	3. use insta_data
 	4. db.posts.find()
+
+=======
+
+**How to Run Insta_Data:** 
+
+::
+
+    py.test /insta_data/tests
+>>>>>>> 1366512a0a9a4669f4571dbb397a3f2a6e7207fc

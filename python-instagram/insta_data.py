@@ -1,5 +1,9 @@
 from instagram import client, subscriptions
 from pymongo import MongoClient
+from __future__ import (
+	print_function,
+	unicode_literals,
+	)
 import json
 import time
 
