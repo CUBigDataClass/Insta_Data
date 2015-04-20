@@ -15,7 +15,7 @@
 **Running EC2 Instance:**
 1. Find "Insta_Data.pem" file and move it to a location you can easily access and go to folder.
 2. Run: ```chmod 400 Insta_data.pem```
-3. ```ssh -i Insta_Data.pem ec2-user@ec2-52-10-211-62.us-west-2.compute.amazonaws.com```
+4. ```ssh -i Insta_Data.pem ec2-user@ec2-52-10-211-62.us-west-2.compute.amazonaws.com```
 
 **Accessing MongoDB**
 Once on the EC2 instance:
