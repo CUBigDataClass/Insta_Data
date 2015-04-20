@@ -31,4 +31,3 @@
 ::
 
     py.test /insta_data/tests
->>>>>>> 1366512a0a9a4669f4571dbb397a3f2a6e7207fc
