@@ -13,25 +13,19 @@
 **Project:** Analyze Instagram data to find most popular/trending hashtags as well as the most liked pictures using those hashtags.
 
 **Running EC2 Instance:**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 444ed9c... Update README.md
+
 1. Find "Insta_Data.pem" file and move it to a location you can easily access and go to folder.
-2. Run: ```chmod 400 Insta_data.pem```
+2. Run: chmod 400 Insta_data.pem
 3. ```ssh -i Insta_Data.pem ec2-user@ec2-52-10-211-62.us-west-2.compute.amazonaws.com```
-=======
-Find "Insta_Data.pem" file and move it to a location you can easily access and go to folder.
-Run: chmod 400 Insta_data.pem
-ssh -i Insta_Data.pem ec2-user@ec2-52-10-211-62.us-west-2.compute.amazonaws.com
->>>>>>> parent of 88bab33... Update README.md
 
 **Accessing MongoDB**
-	Once on the EC2 instance:
-```mongo```
-```show dbs```
-```use insta_data```
-```db.posts.find()```
+Once on the EC2 instance:
+```
+mongo
+show dbs
+use insta_data
+db.posts.find()
+```
 
 =======
 
