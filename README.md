@@ -16,4 +16,4 @@
 
 ::
 
-py.test /insta_data/tests
+    py.test /insta_data/tests
