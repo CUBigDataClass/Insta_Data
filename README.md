@@ -33,4 +33,4 @@ db.posts.find()
 
 **How to Run Insta_Data:** 
 
-    py.test /insta_data/tests
+    python /insta_data/
