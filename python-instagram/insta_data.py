@@ -27,7 +27,7 @@ api = client.InstagramAPI(access_token='4689265.35307b6.392bd0f97a694647baeded2c
 #media_popular = api.media_search(lat="37.7808851",lng="-122.3948632",distance=1000)
 i = 0
 # db[]
-while(i < 10000):
+while(i < 1000000):
 	media_popular = api.media_popular()
 	for media in media_popular:
 		try:
