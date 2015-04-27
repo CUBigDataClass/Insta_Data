@@ -37,7 +37,7 @@ while(True):
 	stuff = []
 
 	for p in tagToPosts[maxTag]:
-		stuff.append((postToLikes[p],postToUrl[p]))
+		stuff.append((postToLikes[p],postToUrl[p], p))
 
 	stuff.sort(reverse=True, key=lambda tup: tup[0])
 
