@@ -1,11 +1,6 @@
 from instagram import client, subscriptions
 from pymongo import MongoClient
-from __future__ import (
-	print_function,
-	unicode_literals,
-	)
-import json
-import time
+import json, time, sys
 
 connection = MongoClient('localhost', 27017)
 db = connection.insta_data
@@ -27,7 +22,7 @@ CONFIG = {
 #client_id: 35307b66147846e696b719184e85cb66
 #client_secret: f494c43f43c44fe4b5ba8d97deec3086
 
-api = client.InstagramAPI(access_token='4689265.35307b6.392bd0f97a694647baeded2c94e041b6')
+api = client.InstagramAPI(access_token='1700604596.71e7fd4.c32baf533cc54d1b924629ac80b1c87f')
 #media_popular = api.media_search(lat="37.7808851",lng="-122.3948632",distance=1000)
 # i = 0
 # db[]
@@ -52,11 +47,12 @@ while(True):
 				username = media.user.username
 				postid = media.id
 				field = {"id":postid, "username":username, "imageurl":url, "likes":likes, "tag":tags, "location":location, "datetime":datetime}
+				# print("id" in db.posts.find({"id":postid}))
 
-				db.posts.update({"id":postid},field, upsert = True)
+				db.posts2.update({"id":postid},field, upsert = True)
 				# i = i + 1
 
 			except Exception as e:
-				pass
-			# print( e)
-	time.sleep(5)
+				#pass
+				print(e)
+	time.sleep(15)

@@ -13,7 +13,7 @@ while(True):
 	postToLikes = defaultdict(int)
 	postToUrl = defaultdict(str)
 
-	things = db.posts.find({
+	things = db.posts2.find({
 	    "datetime" : {"$gte": datetime.utcnow() - timedelta(days=1)}
 	})
 	# i = 0
@@ -41,7 +41,7 @@ while(True):
 
 	stuff.sort(reverse=True, key=lambda tup: tup[0])
 
-	field = {'id':1,'current':stuff}
+	field = {'id':1,'current':stuff, 'tag':maxTag}
 
 	db.current.update({'id':1}, field, upsert = True)
 
