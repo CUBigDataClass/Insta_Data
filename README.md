@@ -32,4 +32,4 @@ db.posts.find()
 
 **How to Run Insta_Data:** 
 
-    node Insta_Data.js
+    node instaPage.js
