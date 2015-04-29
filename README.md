@@ -30,7 +30,7 @@ db.posts.find()
 
 =======
 
-**How to Run Insta_Data:** 
+**How to Run Insta_Data (in InstaData_Front repository):** 
 
     node instaPage.js
     
