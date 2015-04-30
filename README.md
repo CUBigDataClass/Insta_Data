@@ -1,4 +1,5 @@
 # Insta_Data
+http://52.10.211.62:50000/
 Frontend Repo: https://github.com/psudendra/InstaData_Front
 
 **Team Members:**
